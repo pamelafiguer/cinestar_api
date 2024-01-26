@@ -32,7 +32,7 @@ def cines():
     return jsonify(cines)
 
 
-@app.route('/cine/<int:id>')
+@app.route('/cines/<int:id>')
 def cine(id):
     cursor.callproc('sp_getCineTarifas',(id,))
     for data in cursor.stored_results():
